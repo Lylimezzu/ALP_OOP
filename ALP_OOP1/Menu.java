@@ -125,15 +125,18 @@ public class Menu {
     }
 
     public void editStok() {
-
+		System.out.println("==========================");
+        System.out.println("\n===== Edit Stock =====");
     }
 
     public void editHarga() {
-
+		System.out.println("==========================");
+        System.out.println("\n===== Edit Harga =====");
     }
 
     public void tambahStok() {
-
+		System.out.println("==========================");
+        System.out.println("\n===== Tambah Stock =====");
     }
 
     public void tambahBarang() {
@@ -152,10 +155,12 @@ public class Menu {
     }
 
     public void daftarTransaksi() {
-
+		System.out.println("==========================");
+        System.out.println("\n===== Daftar  Transaction =====");
     }
 
     public void totalPendapatan() {
-
+		System.out.println("==========================");
+        System.out.println("\n===== Total Income =====");
     }
 }
