@@ -80,7 +80,7 @@ public class Menu {
         System.out.println("===   2. Edit Stok     ===");
         System.out.println("===   3. Edit Harga    ===");
         System.out.println("===   4. Tambah Stok   ===");
-        System.out.println("===   5. Tambah barang ===");
+        System.out.println("===   5. Tambah Barang ===");
         System.out.println("===== 0. Kembali     =====");
         System.out.println("==========================");
         System.out.print("Pilih : ");
@@ -125,18 +125,58 @@ public class Menu {
     }
 
     public void editStok() {
-		System.out.println("==========================");
+	System.out.println("==========================");
         System.out.println("\n===== Edit Stock =====");
+	System.out.println("== Nama barang : ");
+	get.namaBarang(barang);
+	System.out.println("== Last Stock : ");
+	get.stockBarang(barang);
+	System.out.println("== new Stock : ");
+	int editStock = scan.nextInt();
+	System.out.println("==========================");
+	Barang barang = new Barang(namaBarang, editStock, hargaBarang);
+	penyimpanan.simpanBarang(barang);
+	System.out.println("newest update stock :");
+	System.out.println(get.namaBarang(barang));
+	System.out.println(get.editStock(barang));
+	System.out.println(get.hargaBarang(barang));
+	System.out.println("==========================");
     }
 
     public void editHarga() {
-		System.out.println("==========================");
+	System.out.println("==========================");
         System.out.println("\n===== Edit Harga =====");
+	System.out.println("== Nama barang : ");
+	get.namaBarang(barang);
+	System.out.println("== last price : ");
+	get.hargaBarang(barang);
+	System.out.println("== new price : ");
+	double editPrice = scan.nextDouble();
+	System.out.println("==========================");
+	Barang barang = new Barang(namaBarang, stockBarang, editPrice);
+	penyimpanan.simpanBarang(barang);
+	System.out.println("newest update price :");
+	System.out.println(get.namaBarang(barang));
+	System.out.println(get.stockBarang(barang));
+	System.out.println(get.editPrice(barang));
+	System.out.println("==========================");
     }
 
     public void tambahStok() {
-		System.out.println("==========================");
+	System.out.println("==========================");
         System.out.println("\n===== Tambah Stock =====");
+	System.out.println("== Nama barang : ");
+	get.namaBarang(barang);
+	System.out.println("== add new stock : ")
+	int addStock = scan.nextInt();
+	System.out.println("==========================");
+	Barang barang = new Barang(namaBarang, addStock, hargaBarang);
+	penyimpanan.simpanBarang(barang);
+	System.out.println("newest update stock :");
+	System.out.println(get.namaBarang(barang));
+	System.out.println(get.addStock(barang));
+	System.out.println(get.hargaBarang(barang));
+	System.out.println("==========================");
     }
 
     public void tambahBarang() {
@@ -152,15 +192,16 @@ public class Menu {
         Barang barang = new Barang(namabarang, stokbarang, hargabarang);
         penyimpanan.simpanBarang(barang);
         System.out.println("Barang telah tersimpan dengan id: " + barang.getId());
+	System.out.println("==========================");
     }
 
     public void daftarTransaksi() {
-		System.out.println("==========================");
+	System.out.println("==========================");
         System.out.println("\n===== Daftar  Transaction =====");
     }
 
     public void totalPendapatan() {
-		System.out.println("==========================");
+	System.out.println("==========================");
         System.out.println("\n===== Total Income =====");
     }
 }
